@@ -12,7 +12,12 @@ Vue.createApp({
             if (value < 37) this.resultText = 'Not there yet';
             else if (value > 37) this.resultText = 'Too much!';
             else this.resultText = '37';
-        }
+        },
+        // result() {
+        //     setTimeout(function() {
+        //         this.counter = 0
+        //     }, 5000)
+        // }
     },
     // computed: {
     //     result() {
