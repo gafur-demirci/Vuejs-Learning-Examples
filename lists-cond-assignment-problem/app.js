@@ -3,7 +3,12 @@ const app = Vue.createApp({
         return {
             assignmentList: [],
             task: '',
-            isVisible: true
+            isVisible: true,
+            country: {
+                "name": "Turkiye",
+                "population": 85000000
+            },
+            date: new Date()
         }
     },
     methods: {
@@ -13,6 +18,12 @@ const app = Vue.createApp({
         },
         listVisibilityChange() {
             this.isVisible = !this.isVisible
+        },
+        toTitleDate(date) {
+            console.log(this.date);
+        },
+        formatDate(date){
+            console.log(this.date); 
         }
     },
     computed: {
