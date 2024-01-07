@@ -1,6 +1,7 @@
 <template>
   <section>
     <base-card>
+    <!-- #header -> v-slot:header -->
       <template #header>
         <div>
           <h3>{{ fullName }}</h3>
