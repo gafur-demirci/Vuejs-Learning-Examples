@@ -1,24 +1,13 @@
 <template>
-  <!-- <ul v-for="resource in storedResources" :key="resource.id">
-    <h1>{{ resource.title }}</h1>
-    <h3>{{ resource.description }}</h3>
-    <a :href="resource.link" target="_blank">Open {{ resource.title }}</a>
-  </ul> -->
-  <resource-item
-    v-for="resource in storedResources"
-    :key="resource.id"
-    :title="resource.title"
-    :description="resource.description"
-    :link="resource.link"
-  ></resource-item>
+  <stored-resources :resources="storedResources"> </stored-resources>
 </template>
 
 <script>
-import ResourceItem from './components/resources/ResourceItem.vue';
+import StoredResources from './components/resources/StoredResources.vue';
 
 export default {
   components: {
-    ResourceItem,
+    StoredResources,
   },
   data() {
     return {
@@ -40,3 +29,19 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', 'sans-serif';
+}
+
+body {
+  margin: 0;
+}
+</style>
