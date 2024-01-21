@@ -1,32 +1,31 @@
 <template>
     <li>
-        <div>
+        <base-card>
             <header>
                 <h3>{{ title }}</h3>
                 <button>Delete</button>
             </header>
-        </div>
-        <p>{{ description }}</p>
-        <nav>
-            <a :href="link" target="_blank">View Resource</a>
-        </nav>
+            <p>{{ description }}</p>
+            <nav>
+                <a :href="link" target="_blank">View Resource</a>
+            </nav>
+        </base-card>
     </li>
 </template>
 
 <script>
 export default {
-    props: ['title','description','link']
+    props: ['title', 'description', 'link']
 }
 </script>
 
 <style scoped>
-
 li {
     margin: auto;
     max-width: 40rem;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,17 +36,17 @@ h3 {
     margin: 0.5rem 0;
 }
 
-p{
+p {
     margin: 0.5rem 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: #ce5c00;
 }
 
-a:hover,a:active{
+a:hover,
+a:active {
     color: #c89300;
 }
-
 </style>
