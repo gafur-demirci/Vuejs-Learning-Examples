@@ -1,4 +1,13 @@
 <template>
+    <base-dialog v-if="inputIsInvalid" title="Invalid Input" @close="confirmError">
+        <template v-slot:default>
+            <p>Unfortunately, at least one input value is invalid.</p>
+            <p>Please check all inputs and make sure you enter at least a few characters into each input field.</p>
+        </template>
+        <template #actions>
+            <base-button @click="confirmError">Okay</base-button>
+        </template>
+    </base-dialog>
     <base-card>
         <form @submit.prevent="submitData">
             <div class="form-control">
@@ -21,30 +30,42 @@
 </template>
 
 <script>
-export default{
+export default {
+    data() {
+        return {
+            inputIsInvalid: false,
+        }
+    },
     inject: ['addResource'],
     methods: {
         submitData() {
             const title = this.$refs.titleInput.value;
             const desc = this.$refs.descriptionInput.value;
             const link = this.$refs.linkInput.value;
-            
-            this.addResource(title,desc,link);
+
+            if (title.trim() === '' || desc.trim() === '' || link.trim() === '') {
+                this.inputIsInvalid = true;
+                return;
+            }
+
+            this.addResource(title, desc, link);
+        },
+        confirmError() {
+            this.inputIsInvalid = false;
         }
     }
 }
 </script>
 
 <style scoped>
-
-label{
+label {
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
 }
 
 input,
-textarea{
+textarea {
     display: block;
     width: 100%;
     font: inherit;
@@ -53,13 +74,13 @@ textarea{
 }
 
 input:focus,
-textarea:focus{
+textarea:focus {
     outline: none;
     border-color: #3a0061;
     background-color: #f7ebff;
 }
-.form-control{
+
+.form-control {
     margin: 1rem 0;
 }
-
 </style>
