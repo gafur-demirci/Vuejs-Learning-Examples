@@ -42,7 +42,8 @@ export default {
     provide() {
         return {
             resources: this.storedResources,
-            addResource: this.addResource
+            addResource: this.addResource,
+            removeResource: this.removeResource
         }
     },
     computed: {
@@ -66,6 +67,18 @@ export default {
             };
             this.storedResources.unshift(newResource);
             this.selectedTab = 'stored-resources';
+        },
+        removeResource(resId) {
+            /**
+             * Orijinal array yeniden override edildiği için provide edilenin yerine geçmez yeni bir array olarak
+             * bellekte tutulur. Vue provide içerisinde ki tanımları referans olarak bellekte tuttuğu için bu tanımlar
+             * üzerinde işlem yaparken yeniden oluşturup değiştirmek yerine var olanı kullanmak gerekmektedir.
+                 this.storedResources = this.storedResources.filter(res => {res.id !== resId})
+                console.log(this.storedResources);
+             */
+            const resIndex = this.storedResources.findIndex(res => res.id === resId);
+            // orijinal array üzerinden parçalama yapar yeni array oluşturmaz.
+            this.storedResources.splice(resIndex,1);
         }
     }
 }
