@@ -30,6 +30,7 @@ button:active {
     background-color: transparent;
     color: #3a0061;
     border: none;
+    min-width: 85.54px;
 }
 
 .flat:hover,

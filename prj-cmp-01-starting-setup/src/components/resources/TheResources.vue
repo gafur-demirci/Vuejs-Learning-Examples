@@ -43,7 +43,8 @@ export default {
         return {
             resources: this.storedResources,
             addResource: this.addResource,
-            removeResource: this.removeResource
+            removeResource: this.removeResource,
+            editResource: this.editResource
         }
     },
     computed: {
@@ -54,6 +55,7 @@ export default {
             return this.selectedTab === 'add-resources' ? null : 'flat'
         }
     },
+    inject: ['editInput'],
     methods: {
         setSelectedTab(tab) {
             this.selectedTab = tab;
@@ -79,6 +81,13 @@ export default {
             const resIndex = this.storedResources.findIndex(res => res.id === resId);
             // orijinal array üzerinden parçalama yapar yeni array oluşturmaz.
             this.storedResources.splice(resIndex,1);
+        },
+        editResource(resId) {
+            const editIndex = this.storedResources.findIndex(res => res.id === resId);
+            let edittedRes = this.storedResources.slice(editIndex,1)
+            console.log(edittedRes);
+            this.editInput = false;
+            
         }
     }
 }
