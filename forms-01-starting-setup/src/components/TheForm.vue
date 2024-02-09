@@ -1,12 +1,13 @@
 <template>
-  <form>
+  <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="user-name">Your Name</label>
-      <input id="user-name" name="user-name" type="text" />
+      <input id="user-name" name="user-name" type="text" v-model="userName" />
     </div>
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
-      <input id="age" name="age" type="number" />
+      <!-- v-model input type'a göre cast yaparken ref ile aynı veri erişilmek istendiğinde daima string olarak dönecektir. -->
+      <input id="age" name="age" type="number" v-model="userAge" ref="ageInput"/>
     </div>
     <div class="form-control">
       <label for="referrer">How did you hear about us?</label>
@@ -51,6 +52,29 @@
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      userName: '',
+      userAge: null
+    }
+  },
+  methods: {
+    submitForm() {
+      console.log('Username : ' + this.userName);
+      this.userName = '';
+      console.log('Userage : ');
+      // v-model data type number
+      console.log(this.userAge);
+      // ref data type string
+      console.log(this.$refs.ageInput.value);
+      this.userAge = null;
+    }
+  }
+}
+</script>
 
 <style scoped>
 form {
