@@ -1,7 +1,9 @@
 <template>
   <the-navigation></the-navigation>
   <main>
-    <component :is="activePage"></component>
+    <!-- <component :is="activePage"></component> -->
+    <!-- Router tarafından görüntülenecek sayfanın belirlenerek burada gösterilmesini sağlar. -->
+    <router-view></router-view>
   </main>
 </template>
 
