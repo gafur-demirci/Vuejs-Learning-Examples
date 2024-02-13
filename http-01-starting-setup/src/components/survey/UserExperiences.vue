@@ -40,11 +40,12 @@ export default {
           if (response.ok) {
             return response.json();
           }
-        }).then((data) => {
+        }).
+        then((data) => {
           this.isLoading = false;
           console.log(data);
           const results = [];
-          for(let id in data){
+          for (let id in data) {
             results.push({
               id: id,
               name: data[id].name,
