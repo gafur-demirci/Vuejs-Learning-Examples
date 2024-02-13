@@ -3,10 +3,12 @@
     <nav>
       <ul>
         <li>
-          <button @click="setActivePage('teams-list')">Teams</button>
+          <router-link to="/teams">Teams</router-link>
+          <!-- <button @click="setActivePage('teams-list')">Teams</button> -->
         </li>
         <li>
-          <button @click="setActivePage('users-list')">Users</button>
+          <router-link to="/users">Users</router-link>
+          <!-- <button @click="setActivePage('users-list')">Users</button> -->
         </li>
       </ul>
     </nav>
