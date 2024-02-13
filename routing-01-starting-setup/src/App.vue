@@ -1,5 +1,5 @@
 <template>
-  <the-navigation @set-page="setActivePage"></the-navigation>
+  <the-navigation></the-navigation>
   <main>
     <component :is="activePage"></component>
   </main>
