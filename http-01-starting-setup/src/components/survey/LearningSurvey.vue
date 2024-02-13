@@ -67,7 +67,7 @@ export default {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: { name: this.enteredName, rating: this.chosenRating},
+        body: JSON.stringify({ name: this.enteredName, rating: this.chosenRating}),
       }).then(resp => {
         if(resp.ok){
           //
