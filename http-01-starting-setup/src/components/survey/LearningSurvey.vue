@@ -56,7 +56,7 @@ export default {
         return;
       }
       this.invalidInput = false;
-
+      this.errorMsg = null;
       // this.$emit('survey-submit', {
       //   userName: this.enteredName,
       //   rating: this.chosenRating,
