@@ -16,14 +16,14 @@
 </template>
 
 <script>
-export default {
-  emits: ['set-page'],
-  methods: {
-    setActivePage(page) {
-      this.$emit('set-page', page);
-    },
-  },
-};
+// export default {
+//   emits: ['set-page'],
+//   methods: {
+//     setActivePage(page) {
+//       this.$emit('set-page', page);
+//     },
+//   },
+// };
 </script>
 
 <style scoped>
