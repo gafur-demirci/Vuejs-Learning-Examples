@@ -67,7 +67,16 @@ export default {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: this.enteredName, rating: this.chosenRating}),
+        body: { name: this.enteredName, rating: this.chosenRating},
+      }).then(resp => {
+        if(resp.ok){
+          //
+        }else{
+          throw new Error('Could not save data!');
+        }
+      }).catch((err)=> {
+        console.log(err);
+        this.errorMsg = err.message;
       });
 
       this.enteredName = '';
