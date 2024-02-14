@@ -1,4 +1,5 @@
 <template>
+  <button @click="goTeams">Go Teams</button>
   <ul>
     <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
   </ul>
@@ -12,6 +13,12 @@ export default {
     UserItem,
   },
   inject: ['users'],
+  methods: {
+    goTeams() {
+      // buton üzerinden programaticaly olarak sayfa yönlendirmeleri yapılmak istendiğinde $router ile çalışılmalı.
+      this.$router.push('/teams');
+    }
+  }
 };
 </script>
 
