@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: ['name', 'memberCount'],
+  props: ['id','name', 'memberCount'],
+  computed: {
+    teamMembersLink() {
+      return '/teams/' + this.id
+    }
+  }
 };
 </script>
 
