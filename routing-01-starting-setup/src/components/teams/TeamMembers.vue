@@ -52,12 +52,12 @@ export default {
     // created ise bu sayfa içerisinde ki componentler hazır olduğunda yapılması istenenleri yazmamız için kullanılmalı.
     // this.$route.path -> /teams/t1
     // router config'de verilen : sonraki key ile browser'dan girilen değere erişebiliriz.
-    this.loadTeamMembers(this.$route);
+    this.loadTeamMembers(this.teamId);
   },
   watch: {
     // use for parameter page in reroute other parameterized page -> teams/t2 page then go inside the page router-link to route teams/t3
-    $route(newRoute) {
-      this.loadTeamMembers(newRoute);
+    teamId(newId) {
+      this.loadTeamMembers(newId);
     }
   }
 };
