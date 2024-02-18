@@ -40,12 +40,12 @@ export default {
       const selectedMembers = [];
       members.forEach(member => {
         this.users.forEach(user => {
-        if(user.id === member) selectedMembers.push(user);
+          if (user.id === member) selectedMembers.push(user);
+        });
       });
-    });
-    
-    this.teamName = selectedTeam.name;
-    this.members = selectedMembers;
+
+      this.teamName = selectedTeam.name;
+      this.members = selectedMembers;
     }
   },
   created() {
