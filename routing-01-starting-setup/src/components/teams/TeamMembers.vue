@@ -31,16 +31,14 @@ export default {
       members: []
     };
   },
-  created() {
-    // created ise bu sayfa içerisinde ki componentler hazır olduğunda yapılması istenenleri yazmamız için kullanılmalı.
-    // this.$route.path -> /teams/t1
-    // router config'de verilen : sonraki key ile browser'dan girilen değere erişebiliriz.
-    const teamId = this.$route.params.teamId;
-    const selectedTeam = this.teams.find(team => team.id === teamId);
-    const members = selectedTeam.members;
-    const selectedMembers = [];
-    members.forEach(member => {
-      this.users.forEach(user => {
+  methods: {
+    loadTeamMembers(route) {
+      const teamId = route.params.teamId;
+      const selectedTeam = this.teams.find(team => team.id === teamId);
+      const members = selectedTeam.members;
+      const selectedMembers = [];
+      members.forEach(member => {
+        this.users.forEach(user => {
         if(user.id === member) selectedMembers.push(user);
       });
     });
