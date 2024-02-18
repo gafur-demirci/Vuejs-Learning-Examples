@@ -16,7 +16,7 @@
 import UserItem from '../users/UserItem.vue';
 
 export default {
-  inject: ['teams','users'],
+  inject: ['teams', 'users'],
   components: {
     UserItem
   },
