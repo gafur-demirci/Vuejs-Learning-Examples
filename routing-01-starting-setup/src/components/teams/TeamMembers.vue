@@ -9,6 +9,7 @@
         :role="member.role"
       ></user-item>
     </ul>
+    <router-link :to="'/teams/t2'">Go to</router-link>
   </section>
 </template>
 
