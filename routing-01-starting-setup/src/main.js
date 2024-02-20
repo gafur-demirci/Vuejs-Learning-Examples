@@ -11,10 +11,10 @@ const router = createRouter({
   routes: [
     { path: '/teams', component: TeamsList },
     { path: '/users', component: UsersList },
-    { path: '/teams/:teamId', component: TeamMembers, props: true}
+    { path: '/teams/:teamId', component: TeamMembers, props: true },
     // props:true -> TeamMembers component when loaded with dynamic parameter in that component props
   ],
-  linkActiveClass: 'active'
+  linkActiveClass: 'active',
 });
 
 const app = createApp(App);
