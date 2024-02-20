@@ -9,6 +9,12 @@ import TeamMembers from './components/teams/TeamMembers.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    // Tanımlı sayfayı localhost:8080/ da getirir
+    // { path: '/', component: TeamsList },
+    // Tanımlı sayfa 'localhost:8080/' geldiğinde localhost:8080/teams 'e redirect eder ( url değişerek )
+    { path: '/', redirect: '/teams' },
+    // Var olan path'e alias tanımlayarak ilgili alias'a istek geldiğinde url'i değiştirmeden belirtilen component'i getirir.
+    // { path: '/teams', component: TeamsList, alias: '/' },
     { path: '/teams', component: TeamsList },
     { path: '/users', component: UsersList },
     { path: '/teams/:teamId', component: TeamMembers, props: true },
