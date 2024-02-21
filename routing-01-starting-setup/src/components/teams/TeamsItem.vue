@@ -11,7 +11,13 @@ export default {
   props: ['id', 'name', 'memberCount'],
   computed: {
     teamMembersLink() {
-      return '/teams/' + this.id
+      // return '/teams/' + this.id
+      // sadece string değil object olarak da kullanılabilir.
+      // return { path: '/teams/' +this.id }
+      // router'da tanımlı isim ve router da ki dynamic parameter params üzerinden verilerek aynı işlev sağlanabilir.
+      return { name: 'team-members', params: { teamId: this.id } }
+      // bu şekilde de yapılabilir.
+      // this.$router.push({ name: 'team-members', params: { teamId: this.id } }) 
     }
   }
 };
