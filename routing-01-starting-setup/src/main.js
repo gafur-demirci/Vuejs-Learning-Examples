@@ -17,6 +17,7 @@ const router = createRouter({
     // Var olan path'e alias tanımlayarak ilgili alias'a istek geldiğinde url'i değiştirmeden belirtilen component'i getirir.
     // { path: '/teams', component: TeamsList, alias: '/' },
     {
+      name: 'teams',
       path: '/teams',
       component: TeamsList,
       children: [
