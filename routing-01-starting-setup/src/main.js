@@ -16,9 +16,11 @@ const router = createRouter({
     { path: '/', redirect: '/teams' },
     // Var olan path'e alias tanımlayarak ilgili alias'a istek geldiğinde url'i değiştirmeden belirtilen component'i getirir.
     // { path: '/teams', component: TeamsList, alias: '/' },
-    { path: '/teams', component: TeamsList },
-    { path: '/users', component: UsersList },
-    { path: '/teams/:teamId', component: TeamMembers, props: true },
+    {
+      path: '/teams',
+      component: TeamsList,
+      children: [
+        { path: '/teams/:teamId', component: TeamMembers, props: true },
     // props:true -> TeamMembers component when loaded with dynamic parameter in that component props
     // handle edilmemiş geri kalan tüm url combination'lar için
     { path: '/:notFound(.*)', component: NotFound },
