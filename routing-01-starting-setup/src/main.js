@@ -25,7 +25,12 @@ const router = createRouter({
         footer: TeamFooter,
       },
       children: [
-        { name: 'team-members', path: ':teamId', component: TeamMembers, props: true },
+        {
+          name: 'team-members',
+          path: ':teamId',
+          component: TeamMembers,
+          props: true,
+        },
       ],
     },
     // { path: '/users', component: UsersList },
