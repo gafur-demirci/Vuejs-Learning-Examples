@@ -28,7 +28,14 @@ const router = createRouter({
         { name: 'team-members', path: ':teamId', component: TeamMembers, props: true },
       ],
     },
-    { path: '/users', component: UsersList },
+    // { path: '/users', component: UsersList },
+    {
+      path: '/users',
+      components: {
+        default: UsersList,
+        footer: UserFooter,
+      },
+    },
     // { path: '/teams/:teamId', component: TeamMembers, props: true },
     // props:true -> TeamMembers component when loaded with dynamic parameter in that component props
     // handle edilmemiş geri kalan tüm url combination'lar için
