@@ -15,7 +15,11 @@ export default {
       // sadece string değil object olarak da kullanılabilir.
       // return { path: '/teams/' +this.id }
       // router'da tanımlı isim ve router da ki dynamic parameter params üzerinden verilerek aynı işlev sağlanabilir.
-      return { name: 'team-members', params: { teamId: this.id } }
+      return {
+        name: 'team-members',
+        params: { teamId: this.id },
+        query: { sort: 'asc' },
+      };
       // bu şekilde de yapılabilir.
       // this.$router.push({ name: 'team-members', params: { teamId: this.id } }) 
     }
