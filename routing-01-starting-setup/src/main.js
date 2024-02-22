@@ -19,7 +19,11 @@ const router = createRouter({
     {
       name: 'teams',
       path: '/teams',
-      component: TeamsList,
+      // component: TeamsList,
+      components: {
+        default: TeamsList,
+        footer: TeamFooter,
+      },
       children: [
         { name: 'team-members', path: ':teamId', component: TeamMembers, props: true },
       ],
