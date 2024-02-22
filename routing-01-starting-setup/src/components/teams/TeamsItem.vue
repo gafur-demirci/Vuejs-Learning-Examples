@@ -13,7 +13,7 @@ export default {
     teamMembersLink() {
       // return '/teams/' + this.id
       // sadece string değil object olarak da kullanılabilir.
-      // return { path: '/teams/' +this.id }
+      // return { path: '/teams/' +this.id + '?sort='asc' }
       // router'da tanımlı isim ve router da ki dynamic parameter params üzerinden verilerek aynı işlev sağlanabilir.
       return {
         name: 'team-members',
@@ -21,9 +21,9 @@ export default {
         query: { sort: 'asc' },
       };
       // bu şekilde de yapılabilir.
-      // this.$router.push({ name: 'team-members', params: { teamId: this.id } }) 
-    }
-  }
+      // this.$router.push({ name: 'team-members', params: { teamId: this.id } })
+    },
+  },
 };
 </script>
 
