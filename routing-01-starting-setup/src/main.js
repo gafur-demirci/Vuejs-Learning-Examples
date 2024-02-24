@@ -21,6 +21,7 @@ const router = createRouter({
     {
       name: 'teams',
       path: '/teams',
+      meta: { needsAuth: true },
       // component: TeamsList,
       components: {
         default: TeamsList,
