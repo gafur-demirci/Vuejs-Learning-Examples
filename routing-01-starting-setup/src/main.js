@@ -42,6 +42,11 @@ const router = createRouter({
         default: UsersList,
         footer: UserFooter,
       },
+      beforeEnter(to, from, next) {
+        console.log('users beforeEnter');
+        console.log(to, from);
+        next();
+      },
     },
     // { path: '/teams/:teamId', component: TeamMembers, props: true },
     // props:true -> TeamMembers component when loaded with dynamic parameter in that component props
