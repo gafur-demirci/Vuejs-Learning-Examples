@@ -1,5 +1,6 @@
 <template>
   <button @click="goTeams">Go Teams</button>
+  <button @click="saveChanges">Save Changes</button>
   <ul>
     <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
   </ul>
