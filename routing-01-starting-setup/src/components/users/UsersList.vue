@@ -13,6 +13,11 @@ export default {
     UserItem,
   },
   inject: ['users'],
+  data() {
+    return {
+      isSaved: false
+    }
+  },
   methods: {
     goTeams() {
       // buton üzerinden programaticaly olarak sayfa yönlendirmeleri yapılmak istendiğinde $router ile çalışılmalı.
