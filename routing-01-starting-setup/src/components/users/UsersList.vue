@@ -17,6 +17,9 @@ export default {
     goTeams() {
       // buton üzerinden programaticaly olarak sayfa yönlendirmeleri yapılmak istendiğinde $router ile çalışılmalı.
       this.$router.push('/teams');
+    },
+    saveChanges() {
+      this.isSaved = true;
     }
   },
   beforeRouteEnter(to, from, next) {
