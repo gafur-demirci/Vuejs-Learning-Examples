@@ -67,6 +67,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   console.log('Global beforeEach');
   console.log(to, from);
+  if (to.meta.needsAuth) {
+    console.log('Needs Auth!');
   next();
 });
 
