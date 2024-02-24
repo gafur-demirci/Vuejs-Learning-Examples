@@ -18,6 +18,11 @@ export default {
       // buton üzerinden programaticaly olarak sayfa yönlendirmeleri yapılmak istendiğinde $router ile çalışılmalı.
       this.$router.push('/teams');
     }
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log('Users beforeRouteEnter');
+    console.log(to, from);
+    next();
   }
 };
 </script>
