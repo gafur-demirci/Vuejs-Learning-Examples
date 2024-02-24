@@ -2,12 +2,12 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import App from './App.vue';
-import TeamsList from './components/teams/TeamsList.vue';
-import UsersList from './components/users/UsersList.vue';
+import TeamsList from './pages/TeamsList.vue';
+import UsersList from './pages/UsersList.vue';
 import TeamMembers from './components/teams/TeamMembers.vue';
-import NotFound from './components/nav/NotFound.vue';
-import TeamFooter from './components/teams/TeamFooter.vue';
-import UserFooter from './components/users/UserFooter.vue';
+import NotFound from './pages/NotFound.vue';
+import TeamFooter from './pages/TeamFooter.vue';
+import UserFooter from './pages/UserFooter.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -69,7 +69,11 @@ router.beforeEach((to, from, next) => {
   console.log(to, from);
   if (to.meta.needsAuth) {
     console.log('Needs Auth!');
-  next();
+    next();
+  } else {
+    next();
+  }
+  // next();
 });
 
 router.afterEach((to, from) => {
