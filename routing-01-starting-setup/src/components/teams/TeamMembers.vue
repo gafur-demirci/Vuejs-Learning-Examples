@@ -54,6 +54,12 @@ export default {
     // router config'de verilen : sonraki key ile browser'dan girilen değere erişebiliriz.
     this.loadTeamMembers(this.teamId);
   },
+  // when router inside this comp data change this works
+  beforeRouteUpdate(to, from, next) {
+    console.log('team-members beforeRouteUpdate');
+    this.loadTeamMembers(to.params.teamId);
+    next();
+  },
   watch: {
     // use for parameter page in reroute other parameterized page -> teams/t2 page then go inside the page router-link to route teams/t3
     teamId(newId) {
