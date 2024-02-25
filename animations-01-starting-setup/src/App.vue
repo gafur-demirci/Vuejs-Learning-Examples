@@ -4,6 +4,15 @@
     <button @click="animate">Animate</button>
   </div>
   <div class="container">
+    <!-- Eğer aynı anda sadece 1 tane comp dom'da olursa çalışır
+    aksi durumda transition comp kullanılamaz. -->
+    <transition name="fade-button" mode="out-in">
+      <button @click="showUsers" v-if="!isUsersShow">Show Users</button>
+      <button @click="hideUsers" v-else>Hide Users</button>
+    </transition>
+
+  </div>
+  <div class="container">
     <!-- transition component enter-to-class="" gibi basic class'ları
     özel css class isimleri vererek de kullanılabilir, name ise multiple
     transition components olduğunda istenen comp'e istenen animation 
