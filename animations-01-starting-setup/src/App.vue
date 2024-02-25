@@ -30,6 +30,9 @@ export default {
     hideDialog() {
       this.dialogIsVisible = false;
     },
+    toggleParagraph() {
+      this.isVisibleParagraph = !this.isVisibleParagraph;
+    }
   },
 };
 </script>
