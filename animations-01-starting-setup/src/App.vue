@@ -114,8 +114,8 @@ button:active {
 
 /* begin - element added dom */
 .v-enter-from {
-  opacity: 0;
-  transform: translateY(-30px);
+  /* opacity: 0;
+  transform: translateY(-30px); */
 }
 
 /* during - element inside dom */
@@ -125,14 +125,14 @@ button:active {
 
 /* end - element moved dom */
 .v-enter-to {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1;
+  transform: translateY(0); */
 }
 
 /* begin - element remove dom start */
 .v-leave-from {
-  opacity: 1;
-  transform: translateY(0);
+  /* opacity: 1;
+  transform: translateY(0); */
 }
 
 /* begin - element removing dom */
@@ -142,6 +142,6 @@ button:active {
 
 /* begin - element remove dom end */
 .v-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
+  /* opacity: 0;
+  transform: translateY(30px); */
 }</style>
