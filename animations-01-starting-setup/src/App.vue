@@ -15,7 +15,10 @@
 <script>
 export default {
   data() {
-    return { dialogIsVisible: false };
+    return {
+      isAnimated: false,
+      dialogIsVisible: false
+    };
   },
   methods: {
     showDialog() {
