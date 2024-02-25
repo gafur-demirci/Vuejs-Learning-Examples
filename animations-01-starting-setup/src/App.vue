@@ -37,7 +37,8 @@ export default {
     return {
       isAnimated: false,
       isVisibleParagraph: false,
-      dialogIsVisible: false
+      dialogIsVisible: false,
+      isUsersShow: false
     };
   },
   methods: {
