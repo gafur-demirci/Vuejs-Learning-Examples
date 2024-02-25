@@ -120,7 +120,8 @@ button:active {
 
 /* during - element inside dom */
 .v-enter-active {
-  transition: all 0.3s ease-out;
+  /* transition: all 0.3s ease-out; */
+  animation: slide-scale 0.3s ease-out;
 }
 
 /* end - element moved dom */
@@ -137,7 +138,8 @@ button:active {
 
 /* begin - element removing dom */
 .v-leave-active {
-  transition: all 0.3s ease-in;
+  /* transition: all 0.3s ease-in; */
+  animation: slide-scale 0.3s ease-out;
 }
 
 /* begin - element remove dom end */
