@@ -81,4 +81,8 @@ button:active {
   border: 2px solid #ccc;
   border-radius: 12px;
 }
+
+.animate {
+  transform: translateX(-150px);
+}
 </style>
