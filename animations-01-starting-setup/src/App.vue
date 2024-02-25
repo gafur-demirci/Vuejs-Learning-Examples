@@ -117,11 +117,12 @@ button:active {
 }
 
 /* begin - element added dom */
+/*
 .paragraph-enter-from {
-  /* opacity: 0;
-  transform: translateY(-30px); */
+   opacity: 0;
+  transform: translateY(-30px); 
 }
-
+*/
 /* during - element inside dom */
 .paragraph-enter-active {
   /* transition: all 0.3s ease-out; */
@@ -129,17 +130,19 @@ button:active {
 }
 
 /* end - element moved dom */
+/*
 .paragraph-enter-to {
-  /* opacity: 1;
-  transform: translateY(0); */
+  opacity: 1;
+  transform: translateY(0);
 }
-
+*/
 /* begin - element remove dom start */
+/*
 .paragraph-leave-from {
-  /* opacity: 1;
-  transform: translateY(0); */
+  opacity: 1;
+  transform: translateY(0);
 }
-
+*/
 /* begin - element removing dom */
 .paragraph-leave-active {
   /* transition: all 0.3s ease-in; */
@@ -147,7 +150,10 @@ button:active {
 }
 
 /* begin - element remove dom end */
+/*
 .paragraph-leave-to {
-  /* opacity: 0;
-  transform: translateY(30px); */
-}</style>
+  opacity: 0;
+  transform: translateY(30px);
+}
+*/
+</style>
