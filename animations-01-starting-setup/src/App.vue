@@ -113,37 +113,37 @@ button:active {
 }
 
 /* begin - element added dom */
-.v-enter-from {
+.paragraph-enter-from {
   /* opacity: 0;
   transform: translateY(-30px); */
 }
 
 /* during - element inside dom */
-.v-enter-active {
+.paragraph-enter-active {
   /* transition: all 0.3s ease-out; */
   animation: slide-scale 0.3s ease-out;
 }
 
 /* end - element moved dom */
-.v-enter-to {
+.paragraph-enter-to {
   /* opacity: 1;
   transform: translateY(0); */
 }
 
 /* begin - element remove dom start */
-.v-leave-from {
+.paragraph-leave-from {
   /* opacity: 1;
   transform: translateY(0); */
 }
 
 /* begin - element removing dom */
-.v-leave-active {
+.paragraph-leave-active {
   /* transition: all 0.3s ease-in; */
   animation: slide-scale 0.3s ease-out;
 }
 
 /* begin - element remove dom end */
-.v-leave-to {
+.paragraph-leave-to {
   /* opacity: 0;
   transform: translateY(30px); */
 }</style>
