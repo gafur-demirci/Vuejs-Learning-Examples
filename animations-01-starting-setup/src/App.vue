@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       isAnimated: false,
+      isVisibleParagraph: false,
       dialogIsVisible: false
     };
   },
