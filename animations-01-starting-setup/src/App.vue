@@ -41,6 +41,12 @@ export default {
     };
   },
   methods: {
+    showUsers() {
+      this.isUsersShow = true;
+    },
+    hideUsers() {
+      this.isUsersShow = false;
+    },
     animate() {
       this.isAnimated = true
     },
