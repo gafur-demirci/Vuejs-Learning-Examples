@@ -89,13 +89,15 @@ button:active {
 }
 
 @keyframes slide-fade {
-  0%{
+  0% {
     transform: translateX(0) scale(1);
   }
-  70%{
+
+  70% {
     transform: translateX(-120px) scale(1.1);
   }
-  100%{
+
+  100% {
     transform: translateX(-150px) scale(1);
   }
 }
