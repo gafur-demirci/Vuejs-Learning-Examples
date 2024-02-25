@@ -17,7 +17,7 @@
     özel css class isimleri vererek de kullanılabilir, name ise multiple
     transition components olduğunda istenen comp'e istenen animation 
     verilmesi için isimlendirilerek birbirinden ayrılması sağlanır. -->
-    <transition name="paragraph" >
+    <transition name="paragraph">
       <p v-if="isVisibleParagraph">Some times visible, some times unvisible...</p>
     </transition>
     <button @click="toggleParagraph">Toggle Paragraph</button>
