@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  props: ['open'],
   emits: ['close'],
 };
 </script>
