@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="block"></div>
-    <button>Animate</button>
+    <div class="block" :class="{ animate: isAnimated }"></div>
+    <button @click="animate">Animate</button>
   </div>
   <base-modal @close="hideDialog" v-if="dialogIsVisible">
     <p>This is a test dialog!</p>
