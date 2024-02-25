@@ -40,14 +40,33 @@ dialog {
   animation: modal 0.3s ease-out forwards;
 }
 
-@keyframes modal {
-  from{
+.modal-enter-active {
+  animation: modalOpen 0.3s ease-out;
+}
+
+.modal-leave-active {
+  animation: modalClose 0.3s ease-out;
+}
+
+@keyframes modalOpen {
+  from {
     opacity: 0;
     transform: translateY(-50px) scale(0.9);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalClose {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
   }
 }
 </style>
