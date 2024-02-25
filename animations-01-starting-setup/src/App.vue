@@ -21,6 +21,9 @@ export default {
     };
   },
   methods: {
+    animate() {
+      this.isAnimated = true
+    },
     showDialog() {
       this.dialogIsVisible = true;
     },
